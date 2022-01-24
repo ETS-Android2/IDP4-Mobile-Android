@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.idsmanager.idp4sdkdemo"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation project(':commons')
+    testImplementation 'junit:junit:4.12'
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okio:okio:1.16.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
+    //IDaas SDK
+    implementation (name:'idp4zerotrustlibrary_v2-release', ext:'aar')
+    implementation (name:'verificationtypelibrary-v1.3-release', ext:'aar')
+    implementation (name:'secretlibrary_v1-release', ext:'aar')
+
+    // 阿里实人SDK
+    implementation (name:'rpsdk-4.3.1-open', ext:'aar')
+    implementation (name:'oss-android-sdk-2.9.2', ext:'aar')
+    implementation (name:'SecurityGuardSDK-external-release-5.4.193-preInstall', ext:'aar')
+    implementation (name:'SecurityBodySDK-external-release-5.4.112-preInstall', ext:'aar')
+}

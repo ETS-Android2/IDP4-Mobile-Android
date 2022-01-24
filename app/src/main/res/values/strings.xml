@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IDP4SDKDemo</string>
+    <string name="username_hint_et">请输入账户名</string>
+    <string name="password_hint_et">请输入密码</string>
+    <string name="captcha_hint_et">请输入手机验证码</string>
+    <string name="phonenumber_hint_et">请输入手机号</string>
+</resources>

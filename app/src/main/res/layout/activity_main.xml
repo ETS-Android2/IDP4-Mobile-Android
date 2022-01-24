@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:scrollbars="none"
+    tools:context="com.idsmanager.idp4sdkdemo.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/EditTextStyle"
+            android:hint="@string/username_hint_et"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/EditTextStyle"
+            android:hint="@string/password_hint_et"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            style="@style/EditTextStyle"
+            android:hint="@string/phonenumber_hint_et"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <EditText
+            android:id="@+id/et_captcha"
+            style="@style/EditTextStyle"
+            android:hint="@string/captcha_hint_et"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_phonenumber" />
+
+        <Button
+            android:id="@+id/login"
+            style="@style/ButtonStyle"
+            android:text="账户密码登录"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_captcha" />
+
+
+        <Button
+            android:id="@+id/btn_refreshToken"
+            style="@style/ButtonStyle"
+            android:text="刷新Token"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_check_config"
+            style="@style/ButtonStyle"
+            android:text="查询实人配置是否开启"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_refreshToken" />
+
+        <Button
+            android:id="@+id/btn_start_real_person"
+            style="@style/ButtonStyle"
+            android:text="开始实人认证"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_check_config" />
+
+        <Button
+            android:id="@+id/btn_start_face_auth"
+            style="@style/ButtonStyle"
+            android:text="人脸活体验证"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_start_real_person" />
+
+        <Button
+            android:id="@+id/download_cert"
+            style="@style/ButtonStyle"
+            android:text="下载证书"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_start_face_auth" />
+
+        <Button
+            android:id="@+id/exist_certificate"
+            style="@style/ButtonStyle"
+            android:text="证书是否存在"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/download_cert" />
+
+        <Button
+            android:id="@+id/certificate_login"
+            style="@style/ButtonStyle"
+            android:text="证书登录"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exist_certificate" />
+
+        <Button
+            android:id="@+id/load_sms_verification_code"
+            style="@style/ButtonStyle"
+            android:text="获取短信验证码"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/certificate_login" />
+
+        <Button
+            android:id="@+id/sms_verification_code_login"
+            style="@style/ButtonStyle"
+            android:text="短信验证码登录"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/load_sms_verification_code" />
+
+        <Button
+            android:id="@+id/load_otp_code"
+            style="@style/ButtonStyle"
+            android:text="获取OTP码"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sms_verification_code_login" />
+
+        <Button
+            android:id="@+id/decrypt_qr_content"
+            style="@style/ButtonStyle"
+            android:text="解密二维码内容"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/load_otp_code" />
+
+        <Button
+            android:id="@+id/scan_login_idp"
+            style="@style/ButtonStyle"
+            android:text="扫码登录IDP"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decrypt_qr_content" />
+
+
+        <Button
+            android:id="@+id/load_apps"
+            style="@style/ButtonStyle"
+            android:text="获取已授权应用列表"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scan_login_idp" />
+
+        <Button
+            android:id="@+id/load_app_account"
+            style="@style/ButtonStyle"
+            android:text="获取应用子账户"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/load_apps" />
+
+        <Button
+            android:id="@+id/test_finger_print"
+            style="@style/ButtonStyle"
+            android:text="指纹认证"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/load_app_account" />
+
+        <Button
+            android:id="@+id/gesture"
+            style="@style/ButtonStyle"
+            android:text="手势认证"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test_finger_print" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
