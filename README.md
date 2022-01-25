@@ -45,9 +45,9 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
     ```
  - 下载地址
 
-     [idp4zerotrustlibrary_v2-release.aar](app\libs\idp4zerotrustlibrary_v2-release.aar) 
+     [idp4zerotrustlibrary_v2-release.aar](app/libs/idp4zerotrustlibrary_v2-release.aar) 
 
-     [verificationtypelibrary-v1.3-release.aar](app\libs\verificationtypelibrary-v1.3-release.aar) 
+     [verificationtypelibrary-v1.3-release.aar](app/libs/verificationtypelibrary-v1.3-release.aar) 
  
     - 其中 **idp4zerotrustlibrary-release** 为证书登录IDaaS相关，**verificationtypelibrary-release** 主要是提供指纹和手势能力，用于指纹免密登录等场景。
 
