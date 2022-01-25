@@ -15,7 +15,7 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
 
 ## 二.SDK DEMO 展示
 
-<img src="images/demo.jpg" alt="测试程序截图" style="zoom:50%;" />
+<img src="images/demo.jpg" alt="测试程序截图" style="zoom:30%;" />
 
 ## 三.使用前准备
 
@@ -31,48 +31,55 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
 
 - 1.导入需要的依赖库
 
-    - ```groovy
+    ```groovy
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     implementation 'com.squareup.okio:okio:1.16.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
-    
+
     implementation(name: 'idp4zerotrustlibrary-release', ext: 'aar')
     implementation(name: 'verificationtypelibrary-release', ext: 'aar')
+
+    下载地址
+
+     [idp4zerotrustlibrary_v2-release.aar](app\libs\idp4zerotrustlibrary_v2-release.aar) 
+
+     [verificationtypelibrary-v1.3-release.aar](app\libs\verificationtypelibrary-v1.3-release.aar) 
+
     ```
     
     - 其中 **idp4zerotrustlibrary-release** 为证书登录IDaaS相关，**verificationtypelibrary-release** 主要是提供指纹和手势能力，用于指纹免密登录等场景。
 
 - 给相应权限
 
-    - ```xml
-    <!-- 以下权限需要集成方根据Android系统动态自行获取。-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    ```
+  ```xml
+  <!-- 以下权限需要集成方根据Android系统动态自行获取。-->
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.CAMERA" />
+      <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  ```
 
     - 具体权限需要根据调用的功能去获取。
 
 - 需要在Application的继承类的onCreate方法中初始化SDK信息
 
-    - ```java
-      String appKey = "9e2dae******************************lnd3uby";
-      String appSecret = "RRGr7y*******************************FaKjG";
-      String enterpriseId = "AAAAA";
-      String host = "https://AAAAA.idsmanager.com/";
-      CertificateLogin.getInstance(this)
-            .appKey(appKey)
-            .appSecret(appSecret)
-            .enterpriseId(enterpriseId)
-            .host(host);
-    ```
+  ```java
+    String appKey = "9e2dae******************************lnd3uby";
+    String appSecret = "RRGr7y*******************************FaKjG";
+    String enterpriseId = "AAAAA";
+    String host = "https://AAAAA.idsmanager.com/";
+    CertificateLogin.getInstance(this)
+          .appKey(appKey)
+          .appSecret(appSecret)
+          .enterpriseId(enterpriseId)
+          .host(host);
+  ```
     
     - 以上参数根据IDaaS管理员获取自身对应的数据。
 
