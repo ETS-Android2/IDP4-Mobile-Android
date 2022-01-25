@@ -43,7 +43,7 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
 
 
     ```
-       下载地址
+ - 下载地址
 
      [idp4zerotrustlibrary_v2-release.aar](app\libs\idp4zerotrustlibrary_v2-release.aar) 
 
