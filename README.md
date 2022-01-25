@@ -15,7 +15,7 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
 
 ## 二.SDK DEMO 展示
 
-<img src="images/demo.jpg" alt="测试程序截图" style="zoom:30%;" />
+<img src="images/demo.jpg" alt="测试程序截图" style="height:600px" />
 
 ## 三.使用前准备
 
@@ -27,7 +27,7 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
 
 
 
-## 二.如何集成
+## 三.如何集成
 
 - 1.导入需要的依赖库
 
@@ -83,7 +83,7 @@ IDASS 移动端SDK为用户提供一套接入IDaaS能力，让开发者快速集
     
     - 以上参数根据IDaaS管理员获取自身对应的数据。
 
-## 二.SDK调用
+## 四.SDK调用
 
 ### 1. 账户密码登录
 
